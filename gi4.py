@@ -26,75 +26,74 @@ from googletrans import Translator
 # id Line ( aisyagye )
 #==============================================================================#
 botStart = time.time()
-#kalo mau login code qr disini pake
-gye = LINE()
-gye.log("Auth Token : " + str(gye.authToken))
-channelToken = gye.getChannelResult()
-gye.log("Channel Token : " + str(channelToken))
+#kalo mau login code qr pagarin login token
+#buka yang pagar login qr
+#jika mau login pake token
+#pagarin login qr buka pagar bagian login token
 
-ais = LINE()
-ais.log("Auth Token : " + str(ais.authToken))
-channelToken = ais.getChannelResult()
-ais.log("Channel Token : " + str(channelToken))
+#Galank = LINE()#LOGIN QR
+Galank = LINE("")#LOGIN TOKEN
+Galank.log("Auth Token : " + str(Galank.authToken))
+channelToken = Galank.getChannelResult()
+Galank.log("Channel Token : " + str(channelToken))
 
-ki2 = LINE()
+#ki = LINE()#LOGIN QR
+ki = LINE("")#LOGIN TOKEN
+ki.log("Auth Token : " + str(ki.authToken))
+channelToken = ki.getChannelResult()
+ki.log("Channel Token : " + str(channelToken))
+
+#ki2 = LINE()#LOGIN QR
+ki2 = LINE("")#LOGIN TOKEN
 ki2.log("Auth Token : " + str(ki2.authToken))
 channelToken = ki2.getChannelResult()
 ki2.log("Channel Token : " + str(channelToken))
 
-ki3 = LINE()
+#ki3 = LINE()#LOGIN QR
+ki3 = LINE("")#LOGIN TOKEN
 ki3.log("Auth Token : " + str(ki3.authToken))
 channelToken = ki3.getChannelResult()
 ki3.log("Channel Token : " + str(channelToken))
 
-ki4 = LINE()
+#ki4 = LINE()#LOGIN QR
+ki4 = LINE("")#LOGIN TOKEN
 ki4.log("Auth Token : " + str(gye.authToken))
 channelToken = ki4.getChannelResult()
 ki4.log("Channel Token : " + str(channelToken))
 
-#kalo mau login menggunakan token
-#gunakan disini hapus tanda pagarnya 
-#yg atas dinpagar atau bisa juga token di atas 
-#di dalam tanda LINE ("TOKEN MU ")
-#gye = LINE("Et6qM8UeTce5bGsZG4te.ee6vQU/1ppqr93nt9QLUZG.b5fsCbuxW7zZRtrK5U/74k/53Abd5dWPxfdtLy9bL9I=")
-#ais = LINE("Etska0dbjsHvPgZKwmj9.EikS5M3O+L4fOqxjjVgLsq.KlWfvmGVaXdM0yvKM8WGKARpcbAbiKVF9yORPt8QBJw=")
-#ki2 = LINE("EtQsqzdJMWn73m72Gup0.OdjJmVnqXLeaZxpJzxDMOa.Z+6ApCht+0H1NeyX50QMD0Yq8oIhYyJ14Yg2yoM/tfc=")
-#ki3 = LINE("EtDOOeYj4Rvl5PVfOEaa.ETpCu8czFapUIJQDqIA82G.tcOaI+VmHhWwMbyDL/7yXupWfdIvUJh80yWzu/UJXp8=")
-#ki4 = LINE("EtWyu42OHWKSaxPHY3yd.jTri3xzV4E2Z1xvWxjTrRq.s1oy5gbYMT2haZV7l6yzV0bp5gONcnu+bGSSJ1mbT0c=")
-
-KAC = [gye,ais,ki2,ki3,ki4]
-GUE = [ais,ki2,ki3,ki4] # ini jangan luh hapus peak ini fungsi Ciak alias kick
+KAC = [Galank,ki,ki2,ki3,ki4]
+MEK = [ki,ki2,ki3,ki4] # ini jangan luh hapus peak ini fungsi Ciak alias kick
 #maksudnya agar bot sb/induk gak ikutan nge kick Mudeng ora
-gyeMID = gye.profile.mid
-aisMID = ais.profile.mid
+GalankMID = Galank.profile.mid
+kiMID = ki.profile.mid
 ki2MID = ki2.profile.mid
 ki3MID = ki3.profile.mid
 ki4MID = ki4.profile.mid
-Bots = [gyeMID,aisMID,ki2MID,ki3MID,ki4MID] #ini jangan dinrubah Gunanya agar bot tidak saling kick
+Bots = [GalankMID,kiMID,ki2MID,ki3MID,ki4MID] #ini jangan dinrubah Gunanya agar bot tidak saling kick
 creator = ["u104e95aaefb53cf411f77353f6a96ece"]
 Owner = ["u104e95aaefb53cf411f77353f6a96ece"]
 admin = ["u104e95aaefb53cf411f77353f6a96ece"]
 
-gyeProfile = gye.getProfile()
-aisProfile = ais.getProfile()
+GalankProfile = Galank.getProfile()
+kiProfile = ki.getProfile()
 ki2Profile = ki2.getProfile()
 ki2Profile = ki3.getProfile()
 ki2Profile = ki4.getProfile()
 
-lineSettings = gye.getSettings()
-aisSettings = ais.getSettings()
+lineSettings = Galank.getSettings()
+kiSettings = ki.getSettings()
 ki2Settings = ki2.getSettings()
 ki3Settings = ki3.getSettings()
 ki4Settings = ki4.getSettings()
 
-oepoll = OEPoll(gye)
-oepoll1 = OEPoll(ais)
+oepoll = OEPoll(Galank)
+oepoll1 = OEPoll(ki)
 oepoll2 = OEPoll(ki2)
 oepoll3 = OEPoll(ki3)
 oepoll4 = OEPoll(ki4)
 
-responsename = gye.getProfile().displayName
-responsename2 = ais.getProfile().displayName
+responsename = Galank.getProfile().displayName
+responsename2 = ki.getProfile().displayName
 responsename3 = ki2.getProfile().displayName
 responsename2 = ki3.getProfile().displayName
 responsename3 = ki4.getProfile().displayName
@@ -115,9 +114,9 @@ myProfile = {
 	"pictureStatus": ""
 }
 
-myProfile["displayName"] = gyeProfile.displayName
-myProfile["statusMessage"] = gyeProfile.statusMessage
-myProfile["pictureStatus"] = gyeProfile.pictureStatus
+myProfile["displayName"] = GalankProfile.displayName
+myProfile["statusMessage"] = GalankProfile.statusMessage
+myProfile["pictureStatus"] = GalankProfile.pictureStatus
 
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -148,122 +147,112 @@ def sendMessageWithMention(to, mid):
         logError(error)
         
 def helpmessage():
-    helpMessage = "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ Help 1" + "\n" + \
-                  "║͜͡☆➣ Help 2" + "\n" + \
-                  "║͜͡☆➣ Tag" + "\n" + \
-                  "║͜͡☆➣ Halo ( panggil bot ) " + "\n" + \
-                  "║͜͡☆➣ Absen" + "\n" + \
-                  "║͜͡☆➣ Balik ( usir bot ) " + "\n" + \
-                  "║͜͡☆➣ Aku balik ( kluar semua ) " + "\n" + \
-                  "║͜͡☆➣ Cekk ( cek semua bot )" + "\n" + \
-                  "║͜͡☆➣ Me" + "\n" + \
-                  "║͜͡☆➣ Sp" + "\n" + \
-                  "║͜͡☆➣ Status" + "\n" + \
-                  "║͜͡☆➣ Ciak @" + "\n" + \
-                  "║͜͡☆➣ Kickallmember" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯"
+    helpMessage = "╭════════╬╬════════╮" + "\n" + \
+                  "          HELP" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
+                  "╭════════╬╬════════╮" + "\n" + \
+                  "╞☪ Key 1" + "\n" + \
+                  "╞☪ Key 2" + "\n" + \
+                  "╞☪ Key 3" + "\n" + \
+                  "╞☪ Tag" + "\n" + \
+                  "╞☪ Masuk ( panggil bot ) " + "\n" + \
+                  "╞☪ Respon" + "\n" + \
+                  "╞☪ Pamit ( usir bot ) " + "\n" + \
+                  "╞☪ Get out ( kluar semua ) " + "\n" + \
+                  "╞☪ Mybots ( cek semua bot )" + "\n" + \
+                  "╞☪ Me" + "\n" + \
+                  "╞☪ Sp" + "\n" + \
+                  "╞☪ Settings" + "\n" + \
+                  "╞☪ Goblok @" + "\n" + \
+                  "╞☪ Kickallmember" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
     return helpMessage
     
 def helptexttospeech():
-    helpTextToSpeech =   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
+    helpTextToSpeech =   "╭════════╬╬════════╮" + "\n" + \
+                  "    TΣΔM SLΔCҜβΩT" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP 2" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ Help 1" + "\n" + \
-                  "║͜͡☆➣ Help 2" + "\n" + \
-                  "║͜͡☆➣ Protect on/off" + "\n" + \
-                  "║͜͡☆➣ QrProtect on/off" + "\n" + \
-                  "║͜͡☆➣ InviteProtect on/off" + "\n" + \
-                  "║͜͡☆➣ CancelProtect on/off" + "\n" + \
-                  "║͜͡☆➣ AutoAdd on/off" + "\n" + \
-                  "║͜͡☆➣ AutoJoin on/off" + "\n" + \
-                  "║͜͡☆➣ AutoLeave on/off" + "\n" + \
-                  "║͜͡☆➣ CheckSticker on/off" + "\n" + \
-                  "║͜͡☆➣ AutoRead on/off" + "\n" + \
-                  "║͜͡☆➣ DetectMention on/off" + "\n" + \
-                  "║͜͡☆➣ Join link on/off" + "\n" + \
-                  "║͜͡☆➣ GroupCreator" + "\n" + \
-                  "║͜͡☆➣ GroupId" + "\n" + \
-                  "║͜͡☆➣ GroupName" + "\n" + \
-                  "║͜͡☆➣ GroupPicture" + "\n" + \
-                  "║͜͡☆➣ GroupList" + "\n" + \
-                  "║͜͡☆➣ GroupMemberList" + "\n" + \
-                  "║͜͡☆➣ GroupInfo" + "\n" + \
-                  "║͜͡☆➣ Gt" + "\n" + \
-                  "║͜͡☆➣ Gt on/off" + "\n" + \
-                  "║͜͡☆➣ Mimic on" + "\n" + \
-                  "║͜͡☆➣ Mimic off" + "\n" + \
-                  "║͜͡☆➣ MimicAdd" + "\n" + \
-                  "║͜͡☆➣ MimicDel" + "\n" + \
-                  "║͜͡☆➣ Lurking on/off" + "\n" + \
-                  "║͜͡☆➣ Lurking" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯"
+                  "         HELP 2" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
+                  "╭════════╬╬════════╮" + "\n" + \
+                  "╞☪ Key 1" + "\n" + \
+                  "╞☪ Key 2" + "\n" + \
+                  "╞☪ Key 3" + "\n" + \
+                  "╞☪ Protect on/off" + "\n" + \
+                  "╞☪ QrProtect on/off" + "\n" + \
+                  "╞☪ InviteProtect on/off" + "\n" + \
+                  "╞☪ CancelProtect on/off" + "\n" + \
+                  "╞☪ AutoAdd on/off" + "\n" + \
+                  "╞☪ AutoJoin on/off" + "\n" + \
+                  "╞☪ AutoLeave on/off" + "\n" + \
+                  "╞☪ CheckSticker on/off" + "\n" + \
+                  "╞☪ AutoRead on/off" + "\n" + \
+                  "╞☪ DetectMention on/off" + "\n" + \
+                  "╞☪ Jointickets on/off" + "\n" + \
+                  "╞☪ GroupCreator" + "\n" + \
+                  "╞☪ GroupId" + "\n" + \
+                  "╞☪ GroupName" + "\n" + \
+                  "╞☪ GroupPicture" + "\n" + \
+                  "╞☪ GroupList" + "\n" + \
+                  "╞☪ GroupMemberList" + "\n" + \
+                  "╞☪ GroupInfo" + "\n" + \
+                  "╞☪ Gt" + "\n" + \
+                  "╞☪ Gt on/off" + "\n" + \
+                  "╞☪ Mimic on" + "\n" + \
+                  "╞☪ Mimic off" + "\n" + \
+                  "╞☪ MimicAdd" + "\n" + \
+                  "╞☪ MimicDel" + "\n" + \
+                  "╞☪ Lurking on/off" + "\n" + \
+                  "╞☪ Lurking" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
     return helpTextToSpeech
     
 def helptranslate():
-    helpTranslate =    "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP 3" + "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ AdminLit" + "\n" + \
-                  "║͜͡☆➣ OwnerList" + "\n" + \
-                  "║͜͡☆➣ BanContact" + "\n" + \
-                  "║͜͡☆➣ UnbanContact" + "\n" + \
-                  "║͜͡☆➣ BanList" + "\n" + \
-                  "║͜͡☆➣ Clearban" + "\n" + \
-                  "║͜͡☆➣ Restart" + "\n" + \
-                  "║͜͡☆➣ About" + "\n" + \
-                  "║͜͡☆➣ Me" + "\n" + \
-                  "║͜͡☆➣ MyMid" + "\n" + \
-                  "║͜͡☆➣ Midnya @" + "\n" + \
-                  "║͜͡☆➣ MyName" + "\n" + \
-                  "║͜͡☆➣ MyBio" + "\n" + \
-                  "║͜͡☆➣ MyPicture" + "\n" + \
-                  "║͜͡☆➣ MyVideoProfile" + "\n" + \
-                  "║͜͡☆➣ MyCover" + "\n" + \
-                  "║͜͡☆➣ StealContact @" + "\n" + \
-                  "║͜͡☆➣ StealMid @" + "\n" + \
-                  "║͜͡☆➣ StealName「Mention」" + "\n" + \
-                  "║͜͡☆➣ StealBio @" + "\n" + \
-                  "║͜͡☆➣ StealPicture @" + "\n" + \
-                  "║͜͡☆➣ StealVideoProfile @" + "\n" + \
-                  "║͜͡☆➣ StealCover @" + "\n" + \
-                  "║͜͡☆➣ CloneProfile @" + "\n" + \
-                  "║͜͡☆➣ RestoreProfile" + "\n" + \
-                  "║͜͡☆➣ GroupCreator" + "\n" + \
-                  "║͜͡☆➣ GroupId" + "\n" + \
-                  "║͜͡☆➣ GroupName" + "\n" + \
-                  "║͜͡☆➣ GroupPicture" + "\n" + \
-                  "║͜͡☆➣ Gt" + "\n" + \
-                  "║͜͡☆➣ Gt「On/Off」" + "\n" + \
-                  "║͜͡☆➣ GroupList" + "\n" + \
-                  "║͜͡☆➣ GroupMemberList" + "\n" + \
-                  "║͜͡☆➣ GroupInfo" + "\n" + \
-                  "║͜͡☆➣ Ciak @" + "\n" + \
-                  "║͜͡☆➣ KickAllMember"+ "\n" + \
-                  "╰════════╬♥╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
-                  "╰════════╬♥╬════════╯"
+    helpTranslate =    "╭════════╬╬════════╮" + "\n" + \
+                  "     TΣΔM SLΔCҜβΩT" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
+                  "╭════════╬╬════════╮" + "\n" + \
+                  "        HELP 3" + "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
+                  "╭════════╬╬════════╮" + "\n" + \
+                  "╞☪ AdminLit" + "\n" + \
+                  "╞☪ OwnerList" + "\n" + \
+                  "╞☪ BanContact" + "\n" + \
+                  "╞☪ UnbanContact" + "\n" + \
+                  "╞☪ BanList" + "\n" + \
+                  "╞☪ Clearban" + "\n" + \
+                  "╞☪ Restart" + "\n" + \
+                  "╞☪ About" + "\n" + \
+                  "╞☪ Me" + "\n" + \
+                  "╞☪ MyMid" + "\n" + \
+                  "╞☪ Mid @" + "\n" + \
+                  "╞☪ MyName" + "\n" + \
+                  "╞☪ MyBio" + "\n" + \
+                  "╞☪ MyPicture" + "\n" + \
+                  "╞☪ MyVideoProfile" + "\n" + \
+                  "╞☪ MyCover" + "\n" + \
+                  "╞☪ StealContact @" + "\n" + \
+                  "╞☪ StealMid @" + "\n" + \
+                  "╞☪ StealName「Mention」" + "\n" + \
+                  "╞☪ StealBio @" + "\n" + \
+                  "╞☪ StealPicture @" + "\n" + \
+                  "╞☪ StealVideoProfile @" + "\n" + \
+                  "╞☪ StealCover @" + "\n" + \
+                  "╞☪ CloneProfile @" + "\n" + \
+                  "╞☪ RestoreProfile" + "\n" + \
+                  "╞☪ GroupCreator" + "\n" + \
+                  "╞☪ GroupId" + "\n" + \
+                  "╞☪ GroupName" + "\n" + \
+                  "╞☪ GroupPicture" + "\n" + \
+                  "╞☪ Gt" + "\n" + \
+                  "╞☪ Gt「On/Off」" + "\n" + \
+                  "╞☪ GroupList" + "\n" + \
+                  "╞☪ GroupMemberList" + "\n" + \
+                  "╞☪ GroupInfo" + "\n" + \
+                  "╞☪ Goblok @" + "\n" + \
+                  "╞☪ KickAllMember"+ "\n" + \
+                  "╰════════╬╬════════╯" + "\n" + \
     return helpTranslate
 #==============================================================================#
 def backupData():
@@ -1701,79 +1690,79 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #===============================================================================[ki3MID gyeMID]
                 if op.param3 in ki3MID:
-                    if op.param2 in gyeMID:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
+                    if op.param2 in GalankMID:
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                     else:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
-                        gye.kickoutFromGroup(op.param1,[op.param2])
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
+                        Galank.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki3MID:
-                    if op.param2 in aisMID:
-                        G = ais.getGroup(op.param1)
-#                        ginfo = ais.getGroup(op.param1)
+                    if op.param2 in kiMID:
+                        G = ki.getGroup(op.param1)
+#                        ginfo = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                     else:
-                        G = ais.getGroup(op.param1)
-#                        ginfo = ais.getGroup(op.param1)
-                        ais.kickoutFromGroup(op.param1,[op.param2])
+                        G = ki.getGroup(op.param1)
+#                        ginfo = ki.getGroup(op.param1)
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID ki2MID]
                 elif op.param3 in ki3MID:
@@ -1784,8 +1773,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1802,8 +1791,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1822,14 +1811,14 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G = ki4.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        ki4.updateGroup(G)
+                        ki4.updateGro<up(G)
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                     else:
@@ -1840,8 +1829,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1853,79 +1842,79 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #===============================================================================[ki4MID gyeMID]
                 if op.param3 in ki4MID:
-                    if op.param2 in gyeMID:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
+                    if op.param2 in GalankMID:
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                     else:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
-                        gye.kickoutFromGroup(op.param1,[op.param2])
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
+                        Galank.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki4MID kiMID]
                 elif op.param3 in ki4MID:
-                    if op.param2 in aisMID:
-                        G = ais.getGroup(op.param1)
+                    if op.param2 in kiMID:
+                        G = ki.getGroup(op.param1)
 #                        ginfo = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                     else:
-                        G = ais.getGroup(op.param1)
-#                        ginfo = ais.getGroup(op.param1)
-                        ais.kickoutFromGroup(op.param1,[op.param2])
+                        G = ki.getGroup(op.param1)
+#                        ginfo = ki.getGroup(op.param1)
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki4MID ki2MID]
                 elif op.param3 in ki4MID:
@@ -1936,8 +1925,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1954,8 +1943,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1974,8 +1963,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1992,8 +1981,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2039,26 +2028,14 @@ def lineBot(op):
                     pass
                 elif settings["qrprotect"] == True:
                     settings["blacklist"][op.param2] = True
-                    G = ais.getGroup(op.param1)
+                    G = ki.getGroup(op.param1)
                     G.preventedJoinByTicket = True
-                    ais.updateGroup(G)
+                    ki.updateGroup(G)
                     random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                 else:
-                    gye.sendMessage(op.param1,"Jangan Buka Qr")
+                    Galank.sendMessage(op.param1,"Jangan Buka Qr Anjing")
             else:
-                gye.sendMessage(op.param1,"")
-#==============================================================================#
-       # if op.type == 55:
-        #    print ("[ 55 ] GYEVHA BOTS EMPAT")
-         #   if op.param1 in read["readPoint"]:
-          #      _name = gye.getContact(op.param2).displayName
-           #     tz = pytz.timezone("Asia/Jakarta")
-           #     timeNow = datetime.now(tz=tz)
-            #    timeHours = datetime.strftime(timeNow," (%H:%M)")
-             #   read["readMember"][op.param1][op.param2] = str(_name) + str(timeHours)
-     #   backupData()
-    #except Exception as error:
-     #   logError(error)
+                Galank.sendMessage(op.param1,"")
 #==============================================================================#
         if op.type == 25:
             msg = op.message
@@ -2071,9 +2048,9 @@ def lineBot(op):
                         if l not in n_links:
                             n_links.append(l)
                     for ticket_id in n_links:
-                        group = gye.findGroupByTicket(ticket_id)
-                        gye.acceptGroupInvitationByTicket(group.id,ticket_id)
-                        gye.sendMessage(to, "Berhasil masuk ke group %s" % str(group.name))
+                        group = Galank.findGroupByTicket(ticket_id)
+                        Galank.acceptGroupInvitationByTicket(group.id,ticket_id)
+                        Galank.sendMessage(to, "Berhasil masuk ke group %s" % str(group.name))
                         
     except Exception as error:
         logError(error)
@@ -2081,13 +2058,13 @@ def lineBot(op):
 # Auto join if BOT invited to group
 def NOTIFIED_INVITE_INTO_GROUP(op):
     try:
-        gye.acceptGroupInvitation(op.param1)
-        ais.acceptGroupInvitation(op.param1)
+        Galank.acceptGroupInvitation(op.param1)
+        ki.acceptGroupInvitation(op.param1)
         ki2.acceptGroupInvitation(op.param1)
         ki3.acceptGroupInvitation(op.param1)
         ki4.acceptGroupInvitation(op.param1)
     except Exception as e:
-        gye.log("[NOTIFIED_INVITE_INTO_GROUP] ERROR : " + str(e))
+        Galank.log("[NOTIFIED_INVITE_INTO_GROUP] ERROR : " + str(e))
 # Auto kick if BOT out to group
 def NOTIFIED_KICKOUT_FROM_GROUP(op):
     try:
