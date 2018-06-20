@@ -1,4 +1,4 @@
-# SELFBOT 5 ASSIST PYHON3
+# SELFBOT 5 ASSIST PYTHON³
 # [TΣΔM SLΔCҜβΩT] 
 # Square LINE. 
 # https://line.me/ti/g2/LMAIQCF1K0
