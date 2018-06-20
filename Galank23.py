@@ -194,7 +194,7 @@ def helptexttospeech():
                   "╞☪ CheckSticker on/off" + "\n" + \
                   "╞☪ AutoRead on/off" + "\n" + \
                   "╞☪ DetectMention on/off" + "\n" + \
-                  "╞☪ Jointickets on/off" + "\n" + \
+                  "╞☪ Jointicket on/off" + "\n" + \
                   "╞☪ GroupCreator" + "\n" + \
                   "╞☪ GroupId" + "\n" + \
                   "╞☪ GroupName" + "\n" + \
@@ -202,8 +202,8 @@ def helptexttospeech():
                   "╞☪ GroupList" + "\n" + \
                   "╞☪ GroupMemberList" + "\n" + \
                   "╞☪ GroupInfo" + "\n" + \
-                  "╞☪ Gt" + "\n" + \
-                  "╞☪ Gt on/off" + "\n" + \
+                  "╞☪ Ticket" + "\n" + \
+                  "╞☪ Ticket on/off" + "\n" + \
                   "╞☪ Mimic on" + "\n" + \
                   "╞☪ Mimic off" + "\n" + \
                   "╞☪ MimicAdd" + "\n" + \
