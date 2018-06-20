@@ -20,10 +20,11 @@ from googletrans import Translator
 # Asalkan Rapih Dan Respon
 # jika ingin login Via qr Ganti Saja
 # Atau Login Via Emal
-# Mudeng Orang kalo Ra Mudeng
+# Jangan terlalu goblok ya
+#Kurangin ya...biar gak goblok melulu
 # Sungguh Terlalu
 # Jangan Lupa Add Admin 
-# id Line ( aisyagye )
+# id Line ( fuck.you__ )
 #==============================================================================#
 botStart = time.time()
 #kalo mau login code qr pagarin login token
@@ -245,13 +246,13 @@ def helptranslate():
                   "╞☪ GroupId" + "\n" + \
                   "╞☪ GroupName" + "\n" + \
                   "╞☪ GroupPicture" + "\n" + \
-                  "╞☪ Gt" + "\n" + \
-                  "╞☪ Gt「On/Off」" + "\n" + \
+                  "╞☪ Ticket" + "\n" + \
+                  "╞☪ Ticket「On/Off」" + "\n" + \
                   "╞☪ GroupList" + "\n" + \
                   "╞☪ GroupMemberList" + "\n" + \
                   "╞☪ GroupInfo" + "\n" + \
                   "╞☪ Goblok @" + "\n" + \
-                  "╞☪ KickAllMember"+ "\n" + \
+                  "╞☪ I love you"+ "\n" + \
                   "╰════════╬╬════════╯" + "\n" + \
     return helpTranslate
 #==============================================================================#
@@ -280,7 +281,7 @@ def command(text):
 def lineBot(op):
     try:
         if op.type == 0:
-            print ("[ 0 ] GYEVHA BOTS SATU")
+            print ("[ 0 ]  BOTS SATU")
             return
 #-------------------------------------------------------------------------------
         if op.type == 25:
@@ -288,50 +289,50 @@ def lineBot(op):
             if msg.contentType == 13:
                 if settings["wblack"] == True:
                     if msg.contentMetadata["mid"] in settings["commentBlack"]:
-                        gye.sendMessage(msg.to,"sudah masuk daftar hitam")
+                        Galank.sendMessage(msg.to,"sudah masuk daftar hitam")
                         settings["wblack"] = False
                     else:
                         settings["commentBlack"][msg.contentMetadata["mid"]] = True
                         settings["wblack"] = False
-                        gye.sendMessage(msg.to,"Itu tidak berkomentar")
+                        Galank.sendMessage(msg.to,"Itu tidak berkomentar")
                 elif settings["dblack"] == True:
                     if msg.contentMetadata["mid"] in settings["commentBlack"]:
                         del settings["commentBlack"][msg.contentMetadata["mid"]]
-                        gye.sendMessage(msg.to,"Done")
+                        Galank.sendMessage(msg.to,"Done")
                         settings["dblack"] = False
                     else:
                         settings["dblack"] = False
-                        gye.sendMessage(msg.to,"Tidak ada dalam daftar hitam")
+                        Galank.sendMessage(msg.to,"Tidak ada dalam daftar hitam")
 #-------------------------------------------------------------------------------
                 elif settings["wblacklist"] == True:
                     if msg.contentMetadata["mid"] in settings["blacklist"]:
-                        gye.sendMessage(msg.to,"sudah masuk daftar hitam")
+                        Galank.sendMessage(msg.to,"sudah masuk daftar hitam")
                         settings["wblacklist"] = False
                     else:
                         settings["blacklist"][msg.contentMetadata["mid"]] = True
                         settings["wblacklist"] = False
-                        gye.sendMessage(msg.to,"Done")
+                        Galank.sendMessage(msg.to,"Done")
                         
                 elif settings["dblacklist"] == True:
                     if msg.contentMetadata["mid"] in settings["blacklist"]:
                         del settings["blacklist"][msg.contentMetadata["mid"]]
-                        gye.sendMessage(msg.to,"Done")
+                        Galank.sendMessage(msg.to,"Done")
                         settings["dblacklist"] = False
                     else:
                         settings["dblacklist"] = False
-                        gye.sendMessage(msg.to,"Done")
+                        Galank.sendMessage(msg.to,"Done")
                         
                        
 #-------------------------------------------------------------------------------
         if op.type == 25:
-            print ("[ 25 ] GYEVHA BOTS TIGA")
+            print ("[ 25 ]  BOTS TIGA")
             msg = op.message
             text = msg.text
             msg_id = msg.id
             receiver = msg.to
             sender = msg._from
             if msg.toType == 0:
-                if sender != gye.profile.mid:
+                if sender != Galank.profile.mid:
                     to = sender
                 else:
                     to = receiver
@@ -343,43 +344,43 @@ def lineBot(op):
 #==============================================================================#
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
-                    gye.sendMessage(to, str(helpMessage))
-                    gye.sendContact(to, "u104e95aaefb53cf411f77353f6a96ece")
-                    gye.sendMessage(to,"█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n█░░║║║╠─║─║─║║║║║╠─░░█\n█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█")
-                elif text.lower() == 'help 1':
+                    Galank.sendMessage(to, str(helpMessage))
+                    Galank.sendContact(to, "u78643d09e42a36836a17cc918963a8b7")
+                    Galank.sendMessage(to,"●SLΔCҜβΩT●")
+                elif text.lower() == 'key 1':
                     helpTextToSpeech = helptexttospeech()
-                    gye.sendMessage(to, str(helpTextToSpeech))
-                    gye.sendMessage(to, "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n█░░║║║╠─║─║─║║║║║╠─░░█\n█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█")
-                elif text.lower() == 'help 2':
+                    Galank.sendMessage(to, str(helpTextToSpeech))
+                    Galank.sendMessage(to, "●TΣΔM SLΔCҜβΩT●")
+                elif text.lower() == 'key 2':
                     helpTranslate = helptranslate()
-                    gye.sendMessage(to, str(helpTranslate))
-                    gye.sendMessage(to, "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n█░░║║║╠─║─║─║║║║║╠─░░█\n█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█")
+                    Galank.sendMessage(to, str(helpTranslate))
+                    Galank.sendMessage(to, "●TΣΔM SLΔCҜβΩT●")
 #==============================================================================#
-                elif text.lower() == 'sp':
+                elif text.lower() == 'speed':
                     start = time.time()
-                    gye.sendMessage(to, "Cek Speed...")
+                    Galank.sendMessage(to, "Cek Jomblo...")
                     elapsed_time = time.time() - start
-                    gye.sendMessage(to,format(str(elapsed_time)))
+                    Galank.sendMessage(to,format(str(elapsed_time)))
                 elif text.lower() == 'restart':    
-                    gye.sendMessage(to, "Please Wait...")
+                    Galank.sendMessage(to, "Please Wait...")
                     time.sleep(5)
-                    gye.sendMessage(to, "Restart Sukses")
+                    Galank.sendMessage(to, "Restart Sukses")
                     restartBot()
                 elif text.lower() == 'runtime':
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    gye.sendMessage(to, "login bot selama {}".format(str(runtime)))
+                    Galank.sendMessage(to, "Bot ngesot selama {}".format(str(runtime)))
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u104e95aaefb53cf411f77353f6a96ece"
-                        creator = gye.getContact(owner)
-                        contact = gye.getContact(gyeMID)
-                        grouplist = gye.getGroupIdsJoined()
-                        contactlist = gye.getAllContactIds()
-                        blockedlist = gye.getBlockedContactIds()
-                        ret_ = "╭════════╬♥╬════════╮\nStatus Bots\n ╰════════╬♥╬════════╯\n ╭════════╬♥╬════════╮\n"
+                        owner = "u78643d09e42a36836a17cc918963a8b7"
+                        creator = Galank.getContact(owner)
+                        contact = Galank.getContact(GalankMID)
+                        grouplist = Galank.getGroupIdsJoined()
+                        contactlist = Galank.getAllContactIds()
+                        blockedlist = Galank.getBlockedContactIds()
+                        ret_ = "╭════════╬╬════════╮\nStatus Bots\n ╰════════╬╬════════╯\n ╭════════╬╬════════╮\n"
                         ret_ += "\n╠ akun : {}".format(contact.displayName)
                         ret_ += "\n╠ group : {}".format(str(len(grouplist)))
                         ret_ += "\n╠ teman : {}".format(str(len(contactlist)))
@@ -387,38 +388,38 @@ def lineBot(op):
                         ret_ += "\n╠══[ About Selfbot ]"
                         ret_ += "\n╠ Version : Premium"
                         ret_ += "\n╠ Creator : {}".format(creator.displayName)
-                        ret_ += "\n╰════════╬♥╬════════╯\n\nGYEVHA BOTS╭════════╬♥╬════════╮\n╰════════╬♥╬════════╯"
-                        gye.sendMessage(to, str(ret_))
+                        ret_ += "\n╰════════╬╬════════╯\n\n●TΣΔM SLΔCҜβΩT●╭════════╬╬════════╮\n╰════════╬╬════════╯"
+                        Galank.sendMessage(to, str(ret_))
                     except Exception as e:
-                        gye.sendMessage(msg.to, str(e))
+                        Galank.sendMessage(msg.to, str(e))
 #==============================================================================#
-                elif text.lower() == 'status':
+                elif text.lower() == 'settings':
                     try:
-                        ret_ = "╭════════╬♥╬════════╮\n ║͜͡☆➣ ♥ Status Bots ♥\n ╰════════╬♥╬════════╯\n ╭════════╬♥╬════════╮\n"
+                        ret_ = "╭════════╬╬════════╮\n SΣTTIΠGS PRΩTΣCTIΩΠ \n ╰════════╬╬════════╯\n ╭════════╬╬════════╮\n"
                         if settings["protect"] == True: ret_ += "║͜͡☆➣ Protect ✅"
-                        else: ret_ += "║͜͡☆➣  Protect ❌"
-                        if settings["qrprotect"] == True: ret_ += "\n║͜͡☆➣ Qr Protect ✅"
-                        else: ret_ += "\n║͜͡☆➣ Qr Protect ❌"
-                        if settings["inviteprotect"] == True: ret_ += "\n║͜͡☆➣ Invite Protect ✅"
-                        else: ret_ += "\n║͜͡☆➣ Invite Protect ❌"
-                        if settings["cancelprotect"] == True: ret_ += "\n║͜͡☆➣ Cancel Protect ✅"
-                        else: ret_ += "\n║͜͡☆➣ Cancel Protect ❌"
-                        if settings["autoAdd"] == True: ret_ += "\n║͜͡☆➣ Auto Add ✅"
-                        else: ret_ += "\n║͜͡☆➣ Auto Add ❌"
-                        if settings["autoJoin"] == True: ret_ += "\n║͜͡☆➣ Auto Join ✅"
-                        else: ret_ += "\n║͜͡☆➣ Auto Join ❌"
-                        if settings["autoLeave"] == True: ret_ += "\n║͜͡☆➣ Auto Leave ✅"
-                        else: ret_ += "\n║͜͡☆➣ Auto Leave ❌"
-                        if settings["autoRead"] == True: ret_ += "\n║͜͡☆➣ Auto Read ✅"
-                        else: ret_ += "\n║͜͡☆➣ Auto Read ❌"
-                        if settings["checkSticker"] == True: ret_ += "\n║͜͡☆➣ Check Sticker ✅"
-                        else: ret_ += "\n║͜͡☆➣ Check Sticker ❌"
-                        if settings["detectMention"] == True: ret_ += "\n║͜͡☆➣ Detect Mention ✅"
-                        else: ret_ += "\n║͜͡☆➣ Detect Mention ❌"
-                        ret_ += "\n╰════════╬♥╬════════╯\n╭════════╬♥╬════════╮\n  ║͜͡☆➣ ♥ GYEVHA BOTS ♥\n╰════════╬♥╬════════╯"
-                        gye.sendMessage(to, str(ret_))
+                        else: ret_ += "╞☪  Protect ❌"
+                        if settings["qrprotect"] == True: ret_ += "\n╞☪ Qr Protect ✅"
+                        else: ret_ += "\n╞☪ Qr Protect ❌"
+                        if settings["inviteprotect"] == True: ret_ += "\n╞☪ Invite Protect ✅"
+                        else: ret_ += "\n╞☪ Invite Protect ❌"
+                        if settings["cancelprotect"] == True: ret_ += "\n╞☪ Cancel Protect ✅"
+                        else: ret_ += "\n╞☪ Cancel Protect ❌"
+                        if settings["autoAdd"] == True: ret_ += "\n╞☪ Auto Add ✅"
+                        else: ret_ += "\n╞☪ Auto Add ❌"
+                        if settings["autoJoin"] == True: ret_ += "\n╞☪ Auto Join ✅"
+                        else: ret_ += "\n╞☪ Auto Join ❌"
+                        if settings["autoLeave"] == True: ret_ += "\n╞☪ Auto Leave ✅"
+                        else: ret_ += "\n╞☪ Auto Leave ❌"
+                        if settings["autoRead"] == True: ret_ += "\n╞☪ Auto Read ✅"
+                        else: ret_ += "\n╞☪ Auto Read ❌"
+                        if settings["checkSticker"] == True: ret_ += "\n╞☪ Check Sticker ✅"
+                        else: ret_ += "\n╞☪ Check Sticker ❌"
+                        if settings["detectMention"] == True: ret_ += "\n╞☪ Detect Mention ✅"
+                        else: ret_ += "\n╞☪ Detect Mention ❌"
+                        ret_ += "\n╰════════╬╬════════╯\n╭════════╬╬════════╮\n  ●TΣΔM SLΔCҜβΩT●\n╰════════╬╬════════╯"
+                        Galank.sendMessage(to, str(ret_))
                     except Exception as e:
-                        gye.sendMessage(msg.to, str(e))
+                        Galank.sendMessage(msg.to, str(e))
                         
                 elif msg.text.lower().startswith("spaminvite "):
                    #if msg._from in admin:
@@ -426,21 +427,21 @@ def lineBot(op):
                     userid = dan[0]
                     namagrup = dan[0]
                     jumlah = int(dan[0])
-                    grups = gye.groups
-                    tgb = gye.findContactsByUserid(userid)
+                    grups = Galank.groups
+                    tgb = Galank.findContactsByUserid(userid)
                     if jumlah <= 10000000:
                         for var in range(0,jumlah):
                             try:
-                                gye.createGroup(str(namagrup), [tgb.mid])
+                                Galank.createGroup(str(namagrup), [tgb.mid])
                                 for i in grups:
-                                    grup = gye.getGroup(i)
+                                    grup = Galank.getGroup(i)
                                     if grup.name == namagrup:
-                                        gye.inviteIntoGroup(grup.id, [tgb.mid])
-                                        gye.sendMessage(to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
+                                        Galank.inviteIntoGroup(grup.id, [tgb.mid])
+                                        Galank.sendMessage(to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
                             except Exception as Nigga:
-                                gye.sendMessage(to, str(Nigga))
+                                Galank.sendMessage(to, str(Nigga))
                             #else:
-                                gye.sendMessage(to, "@! kebanyakan njer!!", [sender])
+                                Galank.sendMessage(to, "@! kebanyakan goblok!!", [sender])
 #-------------------------------------------------------------------------------
                 elif msg.text.lower().startswith("owneradd "):
                         key = eval(msg.contentMetadata["MENTION"])
@@ -453,7 +454,7 @@ def lineBot(op):
                                 Owner[target] = True
                                 f=codecs.open('Owner.json','w','utf-8')
                                 json.dump(Owner, f, sort_keys=True, indent=4,ensure_ascii=False)
-                                gye.sendMessage(msg.to,"Owner ☢-Bot-☢\nAdd\nExecuted")
+                                Galank.sendMessage(msg.to,"Owner ●SLΔCҜβΩT●\nAdd\nExecuted")
                             except:
                                 pass
                     
@@ -468,19 +469,19 @@ def lineBot(op):
                                 del Owner[target]
                                 f=codecs.open('Owner.json','w','utf-8')
                                 json.dump(Owner, f, sort_keys=True, indent=4,ensure_ascii=False)
-                                gye.sendMessage(msg.to,"Owner ☢-Bot-☢\nRemove\nExecuted")
+                                Galank.sendMessage(msg.to,"Owner ●SLΔCҜβΩT●\nRemove\nExecuted")
                             except:
                                 pass
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'ownerlist':
                         if Owner == []:
-                            gye.sendMessage(msg.to,"The Ownerlist is empty")
+                            Galank.sendMessage(msg.to,"The Ownerlist is empty")
                         else:
-                            gye.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠PHANTOM GHOST\n╠══✪〘 Owner List 〙✪═══\n"
+                            Galank.sendMessage(msg.to,"Sabar Goblok...")
+                            mc = "╔═══════════════\n╠☪●TΣΔM SLΔCҜβΩT●\n╠══☪Owner List✪═══\n"
                             for mi_d in admin:
-                                mc += "╠✪ " +gye.getContact(mi_d).displayName + "\n"
-                            gye.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~aisyagye 〙\n╚═══════════════")
+                                mc += "╠✪ " +Galank.getContact(mi_d).displayName + "\n"
+                            Galank.sendMessage(msg.to,mc + "╠═══════════════\n╠✪ line.me/ti/p/~fuck.you__ \n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif msg.text.lower().startswith("adminadd "):
                         targets = []
@@ -493,10 +494,10 @@ def lineBot(op):
                                 admin[target] = True
                                 f=codecs.open('admin.json','w','utf-8')
                                 json.dump(admin, f, sort_keys=True, indent=4,ensure_ascii=False)
-                                gye.sendMessage(msg.to,"Admin ☢-Bot-☢\nAdd\nExecuted")
+                                Galank.sendMessage(msg.to,"Admin ●SLΔCҜβΩT●\nAdd\nExecuted")
                                 break
                             except:
-                                gye.sendMessage(msg.to,"Added Target Fail !")
+                                Galank.sendMessage(msg.to,"Added Target Fail !")
                                 break
                     
                 elif msg.text.lower().startswith("admindel "):
@@ -510,133 +511,133 @@ def lineBot(op):
                                 del admin[target]
                                 f=codecs.open('admin.json','w','utf-8')
                                 json.dump(admin, f, sort_keys=True, indent=4,ensure_ascii=False)
-                                gye.sendMessage(msg.to,"Admin ☢-Bot-☢\nRemove\nExecuted")
+                                Galank.sendMessage(msg.to,"Admin ●SLΔCҜβΩT●\nRemove\nExecuted")
                                 break
                             except:
-                                gye.sendMessage(msg.to,"Deleted Target Fail !")
+                                Galank.sendMessage(msg.to,"Deleted Target Fail !")
                             break
               #      else:
-               #         gye.sendMessage(msg.to,"Owner Permission Required")
+               #         Galank.sendMessage(msg.to,"Owner Permission Required")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'adminlist':
                 #    if msg._from in Owner:
                         if admin == []:
-                            gye.sendMessage(msg.to,"The Adminlist is empty")
+                            Galank.sendMessage(msg.to,"The Adminlist is empty")
                         else:
-                            gye.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠PHANTOM GHOST\n╠══✪〘 Admin List 〙✪═══\n"
+                            Galank.sendMessage(msg.to,"Sabar Kampvret...")
+                            mc = "╔═══════════════\n╠☪●TΣΔM SLΔCҜβΩT●\n╠══✪Admin List✪═══\n"
                             for mi_d in admin:
-                                mc += "╠✪ " +gye.getContact(mi_d).displayName + "\n"
-                            gye.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~aisyagye 〙\n╚═══════════════")
+                                mc += "╠✪ " +Galank.getContact(mi_d).displayName + "\n"
+                            Galank.sendMessage(msg.to,mc + "╠═══════════════\n╠✪ line.me/ti/p/~fuck.you__ \n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'protect on':
                         if settings["protect"] == True:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Already On")
                         else:
                             settings["protect"] = True
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Set To On")
                                 
                 elif text.lower() == 'protect off':
                         if settings["protect"] == False:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Already Off")
                         else:
                             settings["protect"] = False
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Set To Off")
 #----------------------------------------------------------------------------------------                        
                 elif text.lower() == 'qrprotect on':
                         if settings["qrprotect"] == True:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Qr Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Already On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Qr Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Set To On")
                         else:
                             settings["qrprotect"] = True
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Qr Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Set To On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Qr Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Already On")
                                 
                 elif text.lower() == 'qrprotect off':
                         if settings["qrprotect"] == False:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Qr Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Already Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Qr Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Set To Off")
                         else:
                             settings["qrprotect"] = False
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Qr Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Set To Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Qr Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Qr Already Off")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'inviteprotect on':
                         if settings["inviteprotect"] == True:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Invite Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Already On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Invite Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Set To On")
                         else:
                             settings["inviteprotect"] = True
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Invite Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Set To On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Invite Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Already On")
                                 
                 elif text.lower() == 'inviteprotect off':
                         if settings["inviteprotect"] == False:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Invite Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Already Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Invite Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Set To Off")
                         else:
                             settings["inviteprotect"] = False
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Invite Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Set To Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Invite Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Invite Already Off")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'cancelprotect on':
                         if settings["cancelprotect"] == True:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
                         else:
                             settings["cancelprotect"] = True
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
                                 
                 elif text.lower() == 'cancelprotect off':
                         if settings["cancelprotect"] == False:
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
                         else:
                             settings["cancelprotect"] = False
                             if settings["lang"] == "JP":
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
                             else:
-                                gye.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
+                                Galank.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'pro on':
                         settings["protect"] = True
                         settings["qrprotect"] = True
                         settings["inviteprotect"] = True
                         settings["cancelprotect"] = True
-                        settings["join link"] = True
-                        gye.sendMessage(msg.to,"Join link on")
-                        gye.sendMessage(msg.to,"Qrprotect on")
-                        gye.sendMessage(msg.to,"Protect on")
-                        gye.sendMessage(msg.to,"Inviteprotect on")
-                        gye.sendMessage(msg.to,"Cancelprotect on")
-                        gye.sendMessage(msg.to,"➲ All Protect Set To On")
+                        settings["jointicket"] = True
+                        Galank.sendMessage(msg.to,"Jointicket on")
+                        Galank.sendMessage(msg.to,"Qrprotect on")
+                        Galank.sendMessage(msg.to,"Protect on")
+                        Galank.sendMessage(msg.to,"Inviteprotect on")
+                        Galank.sendMessage(msg.to,"Cancelprotect on")
+                        Galank.sendMessage(msg.to,"➲ All Protect Set To On")
                         		            
                 elif text.lower() == 'pro off':
              #       if msg._from in Owner:
@@ -644,118 +645,118 @@ def lineBot(op):
                         settings["qrprotect"] = False
                         settings["inviteprotect"] = False
                         settings["cancelprotect"] = False
-                        gye.sendMessage(msg.to,"Qrprotect Off")
-                        gye.sendMessage(msg.to,"Protect Off")
-                        gye.sendMessage(msg.to,"Inviteprotect Off")
-                        gye.sendMessage(msg.to,"Cancelprotect Off")
-                        gye.sendMessage(msg.to,"➲ All Protect Set To Modar")
+                        Galank.sendMessage(msg.to,"Qrprotect Off")
+                        Galank.sendMessage(msg.to,"Protect Off")
+                        Galank.sendMessage(msg.to,"Inviteprotect Off")
+                        Galank.sendMessage(msg.to,"Cancelprotect Off")
+                        Galank.sendMessage(msg.to,"➲ All Protect Set To Modar")
             #        else:
-             #           gye.sendMessage(msg.to,"Just for Owner")
+             #           Galank.sendMessage(msg.to,"Just for Owner")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'autoadd on':
                     settings["autoAdd"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Auto Add")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Auto Add")
                 elif text.lower() == 'autoadd off':
                     settings["autoAdd"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Auto Add")
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Auto Add")
                 elif text.lower() == 'autojoin on':
              #     if msg._from in Owner:    
                     settings["autoJoin"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Auto Join")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Auto Join")
                 elif text.lower() == 'autojoin off':
                 #  if msg._from in Owner:    
                     settings["autoJoin"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Auto Join")
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Auto Join")
                 elif text.lower() == 'autoleave on':
                #   if msg._from in Owner:
                     settings["autoLeave"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Auto Leave")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Auto Leave")
                 elif text.lower() == 'autoleave off':
              #     if msg._from in Owner:
                     settings["autoLeave"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Auto Leave")
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Auto Leave")
                 elif text.lower() == 'autoread on':
                     settings["autoRead"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Auto Read")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Auto Read")
                 elif text.lower() == 'autoread off':
                     settings["autoRead"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Auto Read")
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Auto Read")
                 elif text.lower() == 'checksticker on':
                     settings["checkSticker"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Check Details Sticker")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Check Details Sticker")
                 elif text.lower() == 'checksticker off':
                     settings["checkSticker"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Check Details Sticker")
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Check Details Sticker")
                 elif text.lower() == 'detectmention on':
                     settings["datectMention"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Detect Mention")
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Detect Mention")
                 elif text.lower() == 'detectmention off':
                     settings["datectMention"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Detect Mention")
-                elif text.lower() == 'join link on':
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Detect Mention")
+                elif text.lower() == 'jointicket on':
                     settings["autoJoinTicket"] = True
-                    gye.sendMessage(to, "Berhasil mengaktifkan Auto Join Link")
-                elif text.lower() == 'join link off':
+                    Galank.sendMessage(to, "Berhasil mengaktifkan Auto Join Link")
+                elif text.lower() == 'jointicket off':
                     settings["autoJoinTicket"] = False
-                    gye.sendMessage(to, "Berhasil menonaktifkan Auto Join Link")                    
+                    Galank.sendMessage(to, "Berhasil menonaktifkan Auto Join Link")                    
 #==============================================================================#
-                elif msg.text.lower() == 'cekk':
-                        gye.sendContact(to, gyeMID)
-                        ais.sendContact(to, aisMID)
+                elif msg.text.lower() == 'mybot':
+                        gye.sendContact(to, GalankMID)
+                        ais.sendContact(to, kiMID)
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
-                elif text.lower() in ["balik"]:    
-                    #gye.leaveGroup(msg.to)
-                    ais.leaveGroup(msg.to)
+                elif text.lower() in ["pamit"]:    
+                    #Galank.leaveGroup(msg.to)
+                    ki.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)
-                elif text.lower() in ["aku pamit yah"]:    
-                    gye.leaveGroup(msg.to)
-                    ais.leaveGroup(msg.to)
+                elif text.lower() in ["get out"]:    
+                    Galank.leaveGroup(msg.to)
+                    ki.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)      
-                elif text.lower() in ["halo"]:    
-                    G = gye.getGroup(msg.to)
-                    ginfo = gye.getGroup(msg.to)
+                elif text.lower() in ["masuk"]:    
+                    G = Galank.getGroup(msg.to)
+                    ginfo = Galank.getGroup(msg.to)
                     G.preventedJoinByTicket = False
-                    gye.updateGroup(G)
+                    Galank.updateGroup(G)
                     invsend = 0
-                    Ticket = gye.reissueGroupTicket(msg.to)
-                    ais.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    Ticket = Galank.reissueGroupTicket(msg.to)
+                    ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    G = gye.getGroup(msg.to)
+                    G = Galank.getGroup(msg.to)
                     G.preventedJoinByTicket = True
-                    gye.updateGroup(G)
+                    Galank.updateGroup(G)
                     G.preventedJoinByTicket(G)
-                    gye.updateGroup(G)
+                    Galank.updateGroup(G)
                 
                 elif text.lower() == 'me':
-                    sendMessageWithMention(to, gyeMID)
-                    gye.sendContact(to, gyeMID)
-                    gye.sendMessage(msg.to,"➲ Jangan Songong Pake Sc Orang")
+                    sendMessageWithMention(to, GalankMID)
+                    Galank.sendContact(to, GalankMID)
+                    Galank.sendMessage(msg.to,"Jangan Songong Pake Sc Orang")
                 elif text.lower() == 'mymid':
-                    gye.sendMessage(msg.to,"[MID]\n" +  gyeMID)
+                    Galank.sendMessage(msg.to,"[MID]\n" +  GalankMID)
                 elif text.lower() == 'myname':
-                    me = gye.getContact(gyeMID)
-                    gye.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
+                    me = Galank.getContact(GalankMID)
+                    Galank.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
                 elif text.lower() == 'mybio':
-                    me = gye.getContact(gyeMID)
-                    gye.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
+                    me = Galank.getContact(GalankMID)
+                    Galank.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
                 elif text.lower() == 'mypicture':
-                    me = gye.getContact(gyeMID)
+                    me = Galank.getContact(GalankMID)
                     gye.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
                 elif text.lower() == 'myvideoprofile':
-                    me = gye.getContact(gyeMID)
-                    gye.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
+                    me = Galank.getContact(GalankMID)
+                    Galank.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
                 elif text.lower() == 'mycover':
-                    me = gye.getContact(gyeMID)
-                    cover = gye.getProfileCoverURL(gyeMID)    
-                    gye.sendImageWithURL(msg.to, cover)
+                    me = Galank.getContact(GalankMID)
+                    cover = Galank.getProfileCoverURL(GalankMID)    
+                    Galank.sendImageWithURL(msg.to, cover)
                 elif msg.text.lower().startswith("stealcontact "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -766,10 +767,10 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            contact = gye.getContact(ls)
+                            contact = Galank.getContact(ls)
                             mi_d = contact.mid
-                            gye.sendContact(msg.to, mi_d)
-                elif msg.text.lower().startswith("midnya "):
+                            Galank.sendContact(msg.to, mi_d)
+                elif msg.text.lower().startswith("mid "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -781,7 +782,7 @@ def lineBot(op):
                         ret_ = "[ Mid User ]"
                         for ls in lists:
                             ret_ += "\n{}" + ls
-                        gye.sendMessage(msg.to, str(ret_))
+                        Galank.sendMessage(msg.to, str(ret_))
                 elif msg.text.lower().startswith("stealname "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -792,8 +793,8 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            contact = gye.getContact(ls)
-                            gye.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
+                            contact = Galank.getContact(ls)
+                            Galank.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
                 elif msg.text.lower().startswith("stealbio "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -804,8 +805,8 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            contact = gye.getContact(ls)
-                            gye.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
+                            contact = Galank.getContact(ls)
+                            Galank.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
                 elif msg.text.lower().startswith("stealpicture "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -816,8 +817,8 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            path = "http://dl.profile.gye.naver.jp/" + gye.getContact(ls).pictureStatus
-                            gye.sendImageWithURL(msg.to, str(path))
+                            path = "http://dl.profile.gye.naver.jp/" + Galank.getContact(ls).pictureStatus
+                            Galank.sendImageWithURL(msg.to, str(path))
                 elif msg.text.lower().startswith("stealvideoprofile "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -841,8 +842,8 @@ def lineBot(op):
                                 if mention["M"] not in lists:
                                     lists.append(mention["M"])
                             for ls in lists:
-                                path = gye.getProfileCoverURL(ls)
-                                gye.sendImageWithURL(msg.to, str(path))
+                                path = Galank.getProfileCoverURL(ls)
+                                Galank.sendImageWithURL(msg.to, str(path))
                 elif msg.text.lower().startswith("cloneprofile "):    
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
@@ -852,20 +853,20 @@ def lineBot(op):
                             contact = mention["M"]
                             break
                         try:
-                            gye.cloneContactProfile(contact)
-                            gye.sendMessage(msg.to, "Berhasil clone member tunggu beberapa saat sampai profile berubah")
+                            Galank.cloneContactProfile(contact)
+                            Galank.sendMessage(msg.to, "Berhasil clone member tunggu beberapa saat sampai profile berubah")
                         except:
-                            gye.sendMessage(msg.to, "Gagal clone member")
+                            Galank.sendMessage(msg.to, "Gagal clone member")
                 elif text.lower() == 'restoreprofile':    
                     try:
-                        gyeProfile.displayName = str(myProfile["displayName"])
-                        gyeProfile.statusMessage = str(myProfile["statusMessage"])
-                        gyeProfile.pictureStatus = str(myProfile["pictureStatus"])
-                        gye.updateProfileAttribute(8, gyeProfile.pictureStatus)
-                        gye.updateProfile(gyeProfile)
-                        gye.sendMessage(msg.to, "Berhasil restore profile tunggu beberapa saat sampai profile berubah")
+                        GalankProfile.displayName = str(myProfile["displayName"])
+                        GalankProfile.statusMessage = str(myProfile["statusMessage"])
+                        GalankProfile.pictureStatus = str(myProfile["pictureStatus"])
+                        Galank.updateProfileAttribute(8, GalankProfile.pictureStatus)
+                        Galank.updateProfile(GalankProfile)
+                        Galank.sendMessage(msg.to, "Berhasil restore profile tunggu beberapa saat sampai profile berubah")
                     except:
-                        gye.sendMessage(msg.to, "Gagal restore profile")
+                        Galank.sendMessage(msg.to, "Gagal restore profile goblok")
 #==============================================================================#
                 elif msg.text.lower().startswith("mimicadd "):
                     targets = []
@@ -876,10 +877,10 @@ def lineBot(op):
                     for target in targets:
                         try:
                             settings["mimic"]["target"][target] = True
-                            gye.sendMessage(msg.to,"Target ditambahkan!")
+                            Galank.sendMessage(msg.to,"Target ditambahkan!")
                             break
                         except:
-                            gye.sendMessage(msg.to,"Added Target Fail !")
+                            Galank.sendMessage(msg.to,"Added Target Fail !")
                             break
                 elif msg.text.lower().startswith("mimicdel "):
                     targets = []
@@ -890,19 +891,19 @@ def lineBot(op):
                     for target in targets:
                         try:
                             del settings["mimic"]["target"][target]
-                            gye.sendMessage(msg.to,"Target dihapuskan!")
+                            Galank.sendMessage(msg.to,"Target dihapuskan!")
                             break
                         except:
-                            gye.sendMessage(msg.to,"Deleted Target Fail !")
+                            Galank.sendMessage(msg.to,"Deleted Target Fail !")
                             break
                 elif text.lower() == 'mimiclist':
                     if settings["mimic"]["target"] == {}:
-                        gye.sendMessage(msg.to,"Tidak Ada Target")
+                        Galank.sendMessage(msg.to,"Tidak Ada Target")
                     else:
                         mc = "╔══[ Mimic List ]"
                         for mi_d in settings["mimic"]["target"]:
-                            mc += "\n╠ "+gye.getContact(mi_d).displayName
-                        gye.sendMessage(msg.to,mc + "\n╚══[ Finish ]")
+                            mc += "\n╠ "+Galank.getContact(mi_d).displayName
+                        Galank.sendMessage(msg.to,mc + "\n╚══[ Finish ]")
                     
                 elif "mimic" in msg.text.lower():
                     sep = text.split(" ")
@@ -910,54 +911,54 @@ def lineBot(op):
                     if mic == "on":
                         if settings["mimic"]["status"] == False:
                             settings["mimic"]["status"] = True
-                            gye.sendMessage(msg.to,"Reply Message on")
+                            Galank.sendMessage(msg.to,"Reply Message on")
                     elif mic == "off":
                         if settings["mimic"]["status"] == True:
                             settings["mimic"]["status"] = False
-                            gye.sendMessage(msg.to,"Reply Message off")
+                            Galank.sendMessage(msg.to,"Reply Message off")
 #==============================================================================#
                 elif text.lower() == 'groupcreator':
-                    group = gye.getGroup(to)
+                    group = Galank.getGroup(to)
                     GS = group.creator.mid
-                    gye.sendContact(to, GS)
+                    Galank.sendContact(to, GS)
                 elif text.lower() == 'groupid':
-                    gid = gye.getGroup(to)
-                    gye.sendMessage(to, "[ID Group : ]\n" + gid.id)
+                    gid = Galank.getGroup(to)
+                    Galank.sendMessage(to, "[ID Group : ]\n" + gid.id)
                 elif text.lower() == 'grouppicture':
-                    group = gye.getGroup(to)
+                    group = Galank.getGroup(to)
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
-                    gye.sendImageWithURL(to, path)
+                    Galank.sendImageWithURL(to, path)
                 elif text.lower() == 'groupname':
-                    gid = gye.getGroup(to)
-                    gye.sendMessage(to, "[Nama Group : ]\n" + gid.name)
-                elif text.lower() == 'gt':
+                    gid = Galank.getGroup(to)
+                    Galank.sendMessage(to, "[Nama Group : ]\n" + gid.name)
+                elif text.lower() == 'ticket':
                     if msg.toType == 2:
-                        group = gye.getGroup(to)
+                        group = Galank.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            ticket = gye.reissueGroupTicket(to)
-                            gye.sendMessage(to, "[ Group Ticket ]\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
+                            ticket = Galank.reissueGroupTicket(to)
+                            Galank.sendMessage(to, "[ Group Ticket ]\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
                         else:
-                            gye.sendMessage(to, "Grup qr tidak terbuka silahkan buka terlebih dahulu dengan perintah {}openqr".format(str(settings["keyCommand"])))
-                elif text.lower() == 'gt on':
+                            Galank.sendMessage(to, "Grup qr tidak terbuka silahkan buka terlebih dahulu dengan perintah {}openqr".format(str(settings["keyCommand"])))
+                elif text.lower() == 'ticket on':
                     if msg.toType == 2:
-                        group = gye.getGroup(to)
+                        group = Galank.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            gye.sendMessage(to, "Grup qr sudah terbuka")
+                            Galank.sendMessage(to, "Grup qr sudah terbuka")
                         else:
                             group.preventedJoinByTicket = False
-                            gye.updateGroup(group)
-                            gye.sendMessage(to, "Berhasil membuka grup qr")
-                elif text.lower() == 'gt off':
+                            Galank.updateGroup(group)
+                            Galank.sendMessage(to, "Berhasil membuka grup qr")
+                elif text.lower() == 'ticket off':
                     if msg.toType == 2:
-                        group = gye.getGroup(to)
+                        group = Galank.getGroup(to)
                         if group.preventedJoinByTicket == True:
-                            gye.sendMessage(to, "Grup qr sudah tertutup")
+                            Galank.sendMessage(to, "Grup qr sudah tertutup")
                         else:
                             group.preventedJoinByTicket = True
-                            gye.updateGroup(group)
-                            gye.sendMessage(to, "Berhasil menutup grup qr")
+                            Galank.updateGroup(group)
+                            Galank.sendMessage(to, "Berhasil menutup grup qr")
                 elif text.lower() == 'groupinfo':
-                    group = gye.getGroup(to)
+                    group = Galank.getGroup(to)
                     try:
                         gCreator = group.creator.displayName
                     except:
@@ -971,7 +972,7 @@ def lineBot(op):
                         gTicket = "Tidak ada"
                     else:
                         gQr = "Terbuka"
-                        gTicket = "https://line.me/R/ti/g/{}".format(str(gye.reissueGroupTicket(group.id)))
+                        gTicket = "https://line.me/R/ti/g/{}".format(str(Galank.reissueGroupTicket(group.id)))
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
                     ret_ = "╔══[ Group Info ]"
                     ret_ += "\n╠ Nama Group : {}".format(str(group.name))
@@ -982,72 +983,72 @@ def lineBot(op):
                     ret_ += "\n╠ Group Qr : {}".format(gQr)
                     ret_ += "\n╠ Group Ticket : {}".format(gTicket)
                     ret_ += "\n╚══[ Finish ]"
-                    gye.sendMessage(to, str(ret_))
-                    gye.sendImageWithURL(to, path)
+                    Galank.sendMessage(to, str(ret_))
+                    Galank.sendImageWithURL(to, path)
                 elif text.lower() == 'groupmemberlist':
                     if msg.toType == 2:
-                        group = gye.getGroup(to)
+                        group = Galank.getGroup(to)
                         ret_ = "╔══[ Member List ]"
                         no = 0 + 1
                         for mem in group.members:
                             ret_ += "\n╠ {}. {}".format(str(no), str(mem.displayName))
                             no += 1
                         ret_ += "\n╚══[ Total {} ]".format(str(len(group.members)))
-                        gye.sendMessage(to, str(ret_))
+                        Galank.sendMessage(to, str(ret_))
                 elif text.lower() == 'grouplist':
-                        groups = gye.groups
+                        groups = Galank.groups
                         ret_ = "╔══[ Group List ]"
                         no = 0 + 1
                         for gid in groups:
-                            group = gye.getGroup(gid)
+                            group = Galank.getGroup(gid)
                             ret_ += "\n╠ {}. {} | {}".format(str(no), str(group.name), str(len(group.members)))
                             no += 1
                         ret_ += "\n╚══[ Total {} Groups ]".format(str(len(groups)))
-                        gye.sendMessage(to, str(ret_))
+                        Galank.sendMessage(to, str(ret_))
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'clearban':
                         settings["blacklist"] = {}
-                        gye.sendMessage(msg.to,"➲ Done")
-                        ais.sendMessage(msg.to,"➲ Done")
+                        Galank.sendMessage(msg.to,"➲ Done")
+                        ki.sendMessage(msg.to,"➲ Done")
                         ki2.sendMessage(msg.to,"➲ Done")
                         ki3.sendMessage(msg.to,"➲ Done")
                         ki4.sendMessage(msg.to,"➲ Done")
-                        ais.sendMessage(msg.to,"➲ Blacklist Dibersihkan")
+                        ki.sendMessage(msg.to,"➲ Blacklist Dibersihkan")
                         ki2.sendMessage(msg.to,"➲ Blacklist Dibersihkan")
                         ki3.sendMessage(msg.to,"➲ Blacklist Dibersihkan")
                         ki4.sendMessage(msg.to,"➲ Blacklist Dibersihkan")
-                        ki4.sendMessage(msg.to,"➲ Jangan Jadi Penjahat yah kakak Agar Tak Masuk Blaclist ku")
+                        ki4.sendMessage(msg.to,"➲ Jangan Jadi Penjahat yah kakak Agar Tak Masuk Blaclist ku Goblok")
                         
-                elif text.lower() == 'absen':
-                        gye.sendMessage(msg.to,"➲ Gye 1")
-                        ais.sendMessage(msg.to,"➲ Gye 2")
-                        ki2.sendMessage(msg.to,"➲ Gye 3")
-                        ki3.sendMessage(msg.to,"➲ Gye 4")
-                        ki4.sendMessage(msg.to,"➲ Gye 5")
-                        gye.sendMessage(msg.to,"➲ Jangan Songong Pake Sc Orang")
+                elif text.lower() == 'respon':
+                        Galank.sendMessage(msg.to,"➲ ●SLΔCҜβΩT● 1")
+                        ki.sendMessage(msg.to,"➲ ●SLΔCҜβΩT● 2")
+                        ki2.sendMessage(msg.to,"➲ ●SLΔCҜβΩT● 3")
+                        ki3.sendMessage(msg.to,"➲ ●SLΔCҜβΩT● 4")
+                        ki4.sendMessage(msg.to,"➲ ●SLΔCҜβΩT● 5")
+                        Galank.sendMessage(msg.to,"➲ Jangan Songong Pake Sc Orang")
                         
                 elif text.lower() == 'bancontact':
                         settings["wblacklist"] = True
-                        gye.sendMessage(msg.to,"Send Contact")
+                        Galank.sendMessage(msg.to,"Send Contact")
                         
                 elif msg.text in ["unbancontact"]:
                         settings["dblacklist"] = True
-                        gye.sendMessage(msg.to,"Send Contact")
+                        Galank.sendMessage(msg.to,"Send Contact")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'banlist':
                         if settings["blacklist"] == {}:
-                            gye.sendMessage(msg.to,"Tidak Ada Banlist")
+                            Galank.sendMessage(msg.to,"Tidak Ada Banlist")
                         else:
-                            gye.sendMessage(msg.to,"Daftar Banlist")
+                            Galank.sendMessage(msg.to,"Daftar Banlist")
                             num=1
-                            msgs="═══T E R S A N G K A═══"
+                            msgs="═══PELAKU MALING═══"
                             for mi_d in settings["blacklist"]:
                                 msgs+="\n[%i] %s" % (num, gye.getContact(mi_d).displayName)
                                 num=(num+1)
-                            msgs+="\n═══T E R S A N G K A═══\n\nTotal Tersangka :  %i" % len(settings["blacklist"])
-                            gye.sendMessage(msg.to, msgs)
+                            msgs+="\n═══GOBLOK KAN═══\n\nTotal Tersangka :  %i" % len(settings["blacklist"])
+                            Galank.sendMessage(msg.to, msgs)
 #=======================================================================================
-                elif msg.text.lower().startswith("ciak "):
+                elif msg.text.lower().startswith("goblok "):
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"][0]["M"]
@@ -1055,42 +1056,42 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               random.choice(GUE).kickoutFromGroup(msg.to,[target])
+                               random.choice(MEK).kickoutFromGroup(msg.to,[target])
                            except:
-                               random.choice(GUE).sendText(msg.to,"Error")
+                               random.choice(MEK).sendText(msg.to,"Error")
 #-------------------------------------------------------------------------------
-                elif text.lower() == 'ciak all member':
+                elif text.lower() == 'i love you':
                  #   if msg._from in Owner:
                         if msg.toType == 2:
                             print ("[ 19 ] KICK ALL MEMBER")
                             _name = msg.text.replace("kickallmember","")
-                            #gs = gye.getGroup(msg.to)
-                            gs = ais.getGroup(msg.to)
+                            #gs = Galank.getGroup(msg.to)
+                            gs = ki.getGroup(msg.to)
                             gs = ki2.getGroup(msg.to)
                             gs = ki3.getGroup(msg.to)
                             gs = ki4.getGroup(msg.to)
-                           #gye.sendMessage(msg.to,"「 Bye All 」")
-                           #gye.sendMessage(msg.to,"「 Sory guys 」")
+                           #Galank.sendMessage(msg.to,"「 Bye All 」")
+                           #Galank.sendMessage(msg.to,"「 Sory guys 」")
                             targets = []
                             for g in gs.members:
                                 if _name in g.displayName:
                                     targets.append(g.mid)
                             if targets == []:
-                                gye.sendMessage(msg.to,"Not Found")
+                                Galank.sendMessage(msg.to,"Not Found")
                             else:
                                 for target in targets:
                                     if not target in Bots:
                                         if not target in Owner:
                                             if not target in admin:
                                                 try:
-                                                    klist=[line,ais,ki2,ki3,ki4]
+                                                    klist=[Galank,ki,ki2,ki3,ki4]
                                                     kicker=random.choice(klist)
                                                     kicker.kickoutFromGroup(msg.to,[target])
                                                     print (msg.to,[g.mid])
                                                 except:
-                                                    gye.sendMessage(msg.to,"") 
+                                                    Galank.sendMessage(msg.to,"") 
 #==============================================================================#          
-                elif text.lower() == 'tag':
+                elif text.lower() == 'mantan':
                     group = gye.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
                     k = len(nama)//100
@@ -1102,8 +1103,8 @@ def lineBot(op):
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += u'@Alin \n'
-                        gye.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                        gye.sendMessage(to, "Total {} Mention".format(str(len(nama))))          
+                        Galank.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                        Galank.sendMessage(to, "Total {} Mention".format(str(len(nama))))          
                 elif text.lower() == 'lurking on':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
@@ -1130,7 +1131,7 @@ def lineBot(op):
                             read['ROM'][msg.to] = {}
                             with open('read.json', 'w') as fp:
                                 json.dump(read, fp, sort_keys=True, indent=4)
-                                gye.sendMessage(msg.to,"Lurking already on")
+                                Galank.sendMessage(msg.to,"Lurking already on")
                     else:
                         try:
                             del read['readPoint'][msg.to]
@@ -1143,9 +1144,9 @@ def lineBot(op):
                         read['readTime'][msg.to] = datetime.now().strftime('%H:%M:%S')
                         read['ROM'][msg.to] = {}
                         with open('read.json', 'w') as fp:
-                            json.dump(read, fp, sort_keys=True, indent=4)
-                            gye.sendMessage(msg.to, "Set reading point:\n" + readTime)
-                            gye.sendMessage(msg.to,"➲ Jangan Songong Pake Sc Orang")
+                            Galank.dump(read, fp, sort_keys=True, indent=4)
+                            Galank.sendMessage(msg.to, "Set reading point:\n" + readTime)
+                            Galank.sendMessage(msg.to,"➲ Jangan Songong Pake Sc Orang")
                             
                 elif text.lower() == 'lurking off':
                     tz = pytz.timezone("Asia/Jakarta")
@@ -1161,7 +1162,7 @@ def lineBot(op):
                         if bln == str(k): bln = bulan[k-1]
                     readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : [ " + timeNow.strftime('%H:%M:%S') + " ]"
                     if msg.to not in read['readPoint']:
-                        gye.sendMessage(msg.to,"Lurking already off")
+                        Galank.sendMessage(msg.to,"Lurking already off")
                     else:
                         try:
                             del read['readPoint'][msg.to]
@@ -1169,7 +1170,7 @@ def lineBot(op):
                             del read['readTime'][msg.to]
                         except:
                               pass
-                        gye.sendMessage(msg.to, "Delete reading point:\n" + readTime)
+                        Galank.sendMessage(msg.to, "Delete reading point:\n" + readTime)
     
                 elif text.lower() == 'lurking reset':
                     tz = pytz.timezone("Asia/Jakarta")
@@ -1191,9 +1192,9 @@ def lineBot(op):
                             del read["readTime"][msg.to]
                         except:
                             pass
-                        gye.sendMessage(msg.to, "Reset reading point:\n" + readTime)
+                        Galank.sendMessage(msg.to, "Reset reading point:\n" + readTime)
                     else:
-                        gye.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
+                        Galank.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
                         
                 elif text.lower() == 'lurking':
                     tz = pytz.timezone("Asia/Jakarta")
@@ -1210,12 +1211,12 @@ def lineBot(op):
                     readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : [ " + timeNow.strftime('%H:%M:%S') + " ]"
                     if receiver in read['readPoint']:
                         if read["ROM"][receiver].items() == []:
-                            gye.sendMessage(receiver,"[ Reader ]:\nNone")
+                            Galank.sendMessage(receiver,"[ Reader ]:\nNone")
                         else:
                             chiya = []
                             for rom in read["ROM"][receiver].items():
                                 chiya.append(rom[1])
-                            cmem = gye.getContacts(chiya) 
+                            cmem = Galank.getContacts(chiya) 
                             zx = ""
                             zxc = ""
                             zx2 = []
@@ -1231,64 +1232,64 @@ def lineBot(op):
                             zxc += pesan2
                         text = xpesan+ zxc + "\n[ Lurking time ]: \n" + readTime
                         try:
-                            gye.sendMessage(receiver, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                            Galank.sendMessage(receiver, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
                         except Exception as error:
                             print (error)
                         pass
                     else:
-                        gye.sendMessage(receiver,"Lurking has not been set.")
+                        Galank.sendMessage(receiver,"Lurking has not been set.")
                         
 #===============================================================================[gyeMID - kiMID]
         if op.type == 19:
-            print ("[ 19 ] GYEVHA BOTS KICK")
+            print ("[ 19 ]  BOTS KICK")
             try:
-                if op.param3 in gyeMID:
-                    if op.param2 in aisMID:
-                        G = ais.getGroup(op.param1)
+                if op.param3 in GalankMID:
+                    if op.param2 in kiMID:
+                        G = ki.getGroup(op.param1)
 #                        ginfo = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ais.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
-                    else:
-                        G = ais.getGroup(op.param1)
-#                        ginfo = ais.getGroup(op.param1)
-                        ais.kickoutFromGroup(op.param1,[op.param2])
-                        G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
-                        invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
+                    else:
+                        G = ki.getGroup(op.param1)
+#                        ginfo = ki.getGroup(op.param1)
+                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        G.preventedJoinByTicket = False
+                        ki.updateGroup(G)
+                        invsend = 0
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G = ki.getGroup(op.param1)
+                        G.preventedJoinByTicket = True
+                        ki.updateGroup(G)
+                        G.preventedJoinByTicket(G)
+                        ki.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[gyeMID - ki2MID]
-                elif op.param3 in gyeMID:
+                elif op.param3 in GalankMID:
                     if op.param2 in ki2MID:
                         G = ki2.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1304,8 +1305,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1316,15 +1317,15 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[gyeMID - ki3MID]
-                elif op.param3 in gyeMID:
+                elif op.param3 in GalankMID:
                     if op.param2 in ki3MID:
                         G = ki3.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1340,8 +1341,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1352,14 +1353,14 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[gyeMID - ki4MID]
-                elif op.param3 in gyeMID:
+                elif op.param3 in GalankMID:
                     if op.param2 in ki4MID:
                         G = ki4.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1376,8 +1377,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1388,51 +1389,51 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #===============================================================================[kiMID gyeMID]
-                if op.param3 in aisMID:
-                    if op.param2 in gyeMID:
-                        G = gye.getGroup(op.param1)
+                if op.param3 in kiMID:
+                    if op.param2 in GalankMID:
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                     else:
-                        G = gye.getGroup(op.param1)
-                        gye.kickoutFromGroup(op.param1,[op.param2])
+                        G = Galank.getGroup(op.param1)
+                        Galank.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[kiMID ki2MID]
-                elif op.param3 in aisMID:
+                elif op.param3 in kiMID:
                     if op.param2 in ki2MID:
                         G = ki2.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1449,8 +1450,8 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         invsend = 0
                         Ticket = ki2.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1461,7 +1462,7 @@ def lineBot(op):
                         ki2.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[kiMID ki3MID]
-                elif op.param3 in aisMID:
+                elif op.param3 in kiMID:
                     if op.param2 in ki3MID:
                         G = ki3.getGroup(op.param1)
 #                        ginfo = ki3.getGroup(op.param1)
@@ -1469,7 +1470,7 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1487,8 +1488,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1499,7 +1500,7 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[kiMID ki4MID]
-                elif op.param3 in aisMID:
+                elif op.param3 in kiMID:
                     if op.param2 in ki4MID:
                         G = ki4.getGroup(op.param1)
 #                        ginfo = ki4.getGroup(op.param1)
@@ -1507,8 +1508,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1525,8 +1526,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1538,77 +1539,77 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #===============================================================================[ki2MID gyeMID]
                 if op.param3 in ki2MID:
-                    if op.param2 in gyeMID:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
+                    if op.param2 in GalankMID:
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                     else:
-                        G = gye.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
-                        gye.kickoutFromGroup(op.param1,[op.param2])
+                        G = Galank.getGroup(op.param1)
+#                        ginfo = Galank.getGroup(op.param1)
+                        Galank.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         invsend = 0
-                        Ticket = gye.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = Galank.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = gye.getGroup(op.param1)
+                        G = Galank.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        gye.updateGroup(G)
+                        Galank.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki2MID kiMID]
                 elif op.param3 in ki2MID:
-                    if op.param2 in aisMID:
-                        G = ais.getGroup(op.param1)
-#                        ginfo = ais.getGroup(op.param1)
+                    if op.param2 in kiMID:
+                        G = ki.getGroup(op.param1)
+#                        ginfo = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
-                        Ticket = ais.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
                         ki.updateGroup(G)
                     else:
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
 #                        ginfo = ki.getGroup(op.param1)
-                        ais.kickoutFromGroup(op.param1,[op.param2])
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         invsend = 0
                         Ticket = ki.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ais.getGroup(op.param1)
+                        G = ki.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                        ais.updateGroup(G)
+                        ki.updateGroup(G)
                         G.preventedJoinByTicket(G)
                         ki.updateGroup(G)
                         settings["blacklist"][op.param2] = True
@@ -1621,8 +1622,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1639,8 +1640,8 @@ def lineBot(op):
                         ki3.updateGroup(G)
                         invsend = 0
                         Ticket = ki3.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1659,8 +1660,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1677,8 +1678,8 @@ def lineBot(op):
                         ki4.updateGroup(G)
                         invsend = 0
                         Ticket = ki4.reissueGroupTicket(op.param1)
-                        gye.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ais.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Galank.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
