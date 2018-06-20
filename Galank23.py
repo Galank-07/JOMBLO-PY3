@@ -63,8 +63,11 @@ channelToken = ki4.getChannelResult()
 ki4.log("Channel Token : " + str(channelToken))
 
 KAC = [Galank,ki,ki2,ki3,ki4]
-MEK = [ki,ki2,ki3,ki4] # ini jangan luh hapus peak ini fungsi Ciak alias kick
-#maksudnya agar bot sb/induk gak ikutan nge kick Mudeng ora
+MEK = [ki,ki2,ki3,ki4] # ini jangan luh hapus peak
+#ini fungsi Perkosa alias kick
+#agar bot sb/induk gak ikutan nge kick udah ngerti lom 
+#maka nya pintar dikit,goblok benar
+
 GalankMID = Galank.profile.mid
 kiMID = ki.profile.mid
 ki2MID = ki2.profile.mid
