@@ -9,7 +9,8 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 from gtts import gTTS
 from googletrans import Translator
  
-# Ini Untuk Login Via Lik Dan Via Gmail
+# Ini Untuk Login Via Link Qr Dan Via Gmail
+
 #Galank = LINE()
 #Galank = LINE("Email","Password")
 #Galank.log("Auth Token : " + str(Galank.authToken))
@@ -19,8 +20,8 @@ from googletrans import Translator
 # Silahkan Edit Sesukamu
 # Asalkan Rapih Dan Respon
 # jika ingin login Via qr Ganti Saja
-# Atau Login Via Emal
-# Jangan terlalu goblok ya
+# Atau Login Via Email
+# Jangan terlalu goblok
 #Kurangin ya...biar gak goblok melulu
 # Sungguh Terlalu
 # Jangan Lupa Add Admin 
