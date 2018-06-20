@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from gyevha import *
+from SLACKBOT import *
 from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
@@ -71,9 +71,9 @@ ki2MID = ki2.profile.mid
 ki3MID = ki3.profile.mid
 ki4MID = ki4.profile.mid
 Bots = [GalankMID,kiMID,ki2MID,ki3MID,ki4MID] #ini jangan dinrubah Gunanya agar bot tidak saling kick
-creator = ["u104e95aaefb53cf411f77353f6a96ece"]
-Owner = ["u104e95aaefb53cf411f77353f6a96ece"]
-admin = ["u104e95aaefb53cf411f77353f6a96ece"]
+creator = ["MID KALIAN"]
+Owner = ["MID GOBLOK"]
+admin = ["MID KAMVRET"]
 
 GalankProfile = Galank.getProfile()
 kiProfile = ki.getProfile()
