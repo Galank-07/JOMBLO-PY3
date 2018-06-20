@@ -9,7 +9,7 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 from gtts import gTTS
 from googletrans import Translator
  
-# Ini Untuk Login Via Lik Dan Via Emal
+# Ini Untuk Login Via Lik Dan Via Gmail
 #Galank = LINE()
 #Galank = LINE("Email","Password")
 #Galank.log("Auth Token : " + str(Galank.authToken))
