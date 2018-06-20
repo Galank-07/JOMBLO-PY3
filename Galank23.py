@@ -10,11 +10,11 @@ from gtts import gTTS
 from googletrans import Translator
  
 # Ini Untuk Login Via Lik Dan Via Emal
-#gye = LINE()
-#gye = LINE("Email","Password")
-#gye.log("Auth Token : " + str(gye.authToken))
-#channelToken = gye.getChannelResult()
-#gye.log("Channel Token : " + str(channelToken))
+#Galank = LINE()
+#Galank = LINE("Email","Password")
+#Galank.log("Auth Token : " + str(Galank.authToken))
+#channelToken = Galank.getChannelResult()
+#Galank.log("Channel Token : " + str(channelToken))
 
 # Silahkan Edit Sesukamu
 # Asalkan Rapih Dan Respon
@@ -58,7 +58,7 @@ ki3.log("Channel Token : " + str(channelToken))
 
 #ki4 = LINE()#LOGIN QR
 ki4 = LINE("")#LOGIN TOKEN
-ki4.log("Auth Token : " + str(gye.authToken))
+ki4.log("Auth Token : " + str(ki4.authToken))
 channelToken = ki4.getChannelResult()
 ki4.log("Channel Token : " + str(channelToken))
 
@@ -134,7 +134,7 @@ def restartBot():
     os.execl(python, python, *sys.argv)
     
 def logError(text):
-    gye.log("[ ERROR ] " + str(text))
+    Galank.log("[ ERROR ] " + str(text))
     time_ = datetime.now()
     with open("errorLog.txt","a") as error:
         error.write("\n[%s] %s" % (str(time), text))
@@ -143,7 +143,7 @@ def sendMessageWithMention(to, mid):
     try:
         aa = '{"S":"0","E":"3","M":'+json.dumps(mid)+'}'
         text_ = '@x '
-        gye.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
+        Galank,.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
     except Exception as error:
         logError(error)
         
@@ -155,7 +155,7 @@ def helpmessage():
                   "╞☪ Key 1" + "\n" + \
                   "╞☪ Key 2" + "\n" + \
                   "╞☪ Key 3" + "\n" + \
-                  "╞☪ Tag" + "\n" + \
+                  "╞☪ Mantan" + "\n" + \
                   "╞☪ Masuk ( panggil bot ) " + "\n" + \
                   "╞☪ Respon" + "\n" + \
                   "╞☪ Pamit ( usir bot ) " + "\n" + \
@@ -701,8 +701,8 @@ def lineBot(op):
                     Galank.sendMessage(to, "Berhasil menonaktifkan Auto Join Link")                    
 #==============================================================================#
                 elif msg.text.lower() == 'mybot':
-                        gye.sendContact(to, GalankMID)
-                        ais.sendContact(to, kiMID)
+                        Galank.sendContact(to, GalankMID)
+                        ki.sendContact(to, kiMID)
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
@@ -749,7 +749,7 @@ def lineBot(op):
                     Galank.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
                 elif text.lower() == 'mypicture':
                     me = Galank.getContact(GalankMID)
-                    gye.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
+                    Galank.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
                 elif text.lower() == 'myvideoprofile':
                     me = Galank.getContact(GalankMID)
                     Galank.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
@@ -817,7 +817,7 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            path = "http://dl.profile.gye.naver.jp/" + Galank.getContact(ls).pictureStatus
+                            path = "http://dl.profile.Galank.naver.jp/" + Galank.getContact(ls).pictureStatus
                             Galank.sendImageWithURL(msg.to, str(path))
                 elif msg.text.lower().startswith("stealvideoprofile "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
@@ -829,8 +829,8 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            path = "http://dl.profile.gye.naver.jp/" + gye.getContact(ls).pictureStatus + "/vp"
-                            gye.sendImageWithURL(msg.to, str(path))
+                            path = "http://dl.profile.gye.naver.jp/" + Galank.getContact(ls).pictureStatus + "/vp"
+                            Galank.sendImageWithURL(msg.to, str(path))
                 elif msg.text.lower().startswith("stealcover "):
                     if line != None:
                         if 'MENTION' in msg.contentMetadata.keys()!= None:
@@ -1043,7 +1043,7 @@ def lineBot(op):
                             num=1
                             msgs="═══PELAKU MALING═══"
                             for mi_d in settings["blacklist"]:
-                                msgs+="\n[%i] %s" % (num, gye.getContact(mi_d).displayName)
+                                msgs+="\n[%i] %s" % (num, Galank.getContact(mi_d).displayName)
                                 num=(num+1)
                             msgs+="\n═══GOBLOK KAN═══\n\nTotal Tersangka :  %i" % len(settings["blacklist"])
                             Galank.sendMessage(msg.to, msgs)
@@ -1092,7 +1092,7 @@ def lineBot(op):
                                                     Galank.sendMessage(msg.to,"") 
 #==============================================================================#          
                 elif text.lower() == 'mantan':
-                    group = gye.getGroup(msg.to)
+                    group = Galank.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
                     k = len(nama)//100
                     for a in range(k+1):
@@ -1239,7 +1239,7 @@ def lineBot(op):
                     else:
                         Galank.sendMessage(receiver,"Lurking has not been set.")
                         
-#===============================================================================[gyeMID - kiMID]
+#===============================================================================[GalankMID - kiMID]
         if op.type == 19:
             print ("[ 19 ]  BOTS KICK")
             try:
@@ -1280,7 +1280,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[gyeMID - ki2MID]
+#-------------------------------------------------------------------------------[GalankMID - ki2MID]
                 elif op.param3 in GalankMID:
                     if op.param2 in ki2MID:
                         G = ki2.getGroup(op.param1)
@@ -1316,7 +1316,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki2.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[gyeMID - ki3MID]
+#-------------------------------------------------------------------------------[GalankMID - ki3MID]
                 elif op.param3 in GalankMID:
                     if op.param2 in ki3MID:
                         G = ki3.getGroup(op.param1)
@@ -1352,7 +1352,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki3.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[gyeMID - ki4MID]
+#-------------------------------------------------------------------------------[GalankMID - ki4MID]
                 elif op.param3 in GalankMID:
                     if op.param2 in ki4MID:
                         G = ki4.getGroup(op.param1)
@@ -1388,7 +1388,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#===============================================================================[kiMID gyeMID]
+#===============================================================================[kiMID GalankMID]
                 if op.param3 in kiMID:
                     if op.param2 in GalankMID:
                         G = Galank.getGroup(op.param1)
@@ -1537,7 +1537,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#===============================================================================[ki2MID gyeMID]
+#===============================================================================[ki2MID GalankMID]
                 if op.param3 in ki2MID:
                     if op.param2 in GalankMID:
                         G = Galank.getGroup(op.param1)
@@ -1689,7 +1689,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#===============================================================================[ki3MID gyeMID]
+#===============================================================================[ki3MID GalankMID]
                 if op.param3 in ki3MID:
                     if op.param2 in GalankMID:
                         G = Galank.getGroup(op.param1)
@@ -1841,7 +1841,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#===============================================================================[ki4MID gyeMID]
+#===============================================================================[ki4MID GalankeMID]
                 if op.param3 in ki4MID:
                     if op.param2 in GalankMID:
                         G = Galank.getGroup(op.param1)
@@ -2074,7 +2074,7 @@ def NOTIFIED_KICKOUT_FROM_GROUP(op):
         else:
             pass
     except Exception as e:
-        gye.log("[NOTIFIED_KICKOUT_FROM_GROUP] ERROR : " + str(e))
+        Galank.log("[NOTIFIED_KICKOUT_FROM_GROUP] ERROR : " + str(e))
 
 while True:
     try:
