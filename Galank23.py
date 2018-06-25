@@ -152,10 +152,10 @@ def sendMessageWithMention(to, mid):
         logError(error)
         
 def helpmessage():
-    helpMessage = "╭════════╬╬════════╮" + "\n" + \
+    helpMessage = "╭═══════╬╬════════╮" + "\n" + \
                   "          HELP" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
-                  "╭════════╬╬════════╮" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
+                  "╭═══════╬╬════════╮" + "\n" + \
                   "╞☪ Key 1" + "\n" + \
                   "╞☪ Key 2" + "\n" + \
                   "╞☪ Key 3" + "\n" + \
@@ -170,17 +170,17 @@ def helpmessage():
                   "╞☪ Settings" + "\n" + \
                   "╞☪ Goblok @" + "\n" + \
                   "╞☪ Kickallmember" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
     return helpMessage
     
 def helptexttospeech():
-    helpTextToSpeech =   "╭════════╬╬════════╮" + "\n" + \
+    helpTextToSpeech =   "╭═══════╬╬════════╮" + "\n" + \
                   "    TΣΔM SLΔCҜβΩT" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
-                  "╭════════╬♥╬════════╮" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
+                  "╭═══════╬╬════════╮" + "\n" + \
                   "         HELP 2" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
-                  "╭════════╬╬════════╮" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
+                  "╭═══════╬╬════════╮" + "\n" + \
                   "╞☪ Key 1" + "\n" + \
                   "╞☪ Key 2" + "\n" + \
                   "╞☪ Key 3" + "\n" + \
@@ -210,17 +210,17 @@ def helptexttospeech():
                   "╞☪ MimicDel" + "\n" + \
                   "╞☪ Lurking on/off" + "\n" + \
                   "╞☪ Lurking" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
     return helpTextToSpeech
     
 def helptranslate():
-    helpTranslate =    "╭════════╬╬════════╮" + "\n" + \
+    helpTranslate =    "╭═══════╬╬════════╮" + "\n" + \
                   "     TΣΔM SLΔCҜβΩT" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
-                  "╭════════╬╬════════╮" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
+                  "╭═══════╬╬════════╮" + "\n" + \
                   "        HELP 3" + "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
-                  "╭════════╬╬════════╮" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
+                  "╭═══════╬╬════════╮" + "\n" + \
                   "╞☪ AdminLit" + "\n" + \
                   "╞☪ OwnerList" + "\n" + \
                   "╞☪ BanContact" + "\n" + \
@@ -257,7 +257,7 @@ def helptranslate():
                   "╞☪ GroupInfo" + "\n" + \
                   "╞☪ Goblok @" + "\n" + \
                   "╞☪ I love you"+ "\n" + \
-                  "╰════════╬╬════════╯" + "\n" + \
+                  "╰═══════╬╬════════╯" + "\n" + \
     return helpTranslate
 #==============================================================================#
 def backupData():
@@ -399,8 +399,8 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'settings':
                     try:
-                        ret_ = "╭════════╬╬════════╮\n SΣTTIΠGS PRΩTΣCTIΩΠ \n ╰════════╬╬════════╯\n ╭════════╬╬════════╮\n"
-                        if settings["protect"] == True: ret_ += "║͜͡☆➣ Protect ✅"
+                        ret_ = "╭═══════╬╬═══════╮\n SΣTTIΠGS PRΩTΣCTIΩΠ \n ╰════════╬╬════════╯\n ╭════════╬╬════════╮\n"
+                        if settings["protect"] == True: ret_ += "║͜͡╞☪ Protect ✅"
                         else: ret_ += "╞☪  Protect ❌"
                         if settings["qrprotect"] == True: ret_ += "\n╞☪ Qr Protect ✅"
                         else: ret_ += "\n╞☪ Qr Protect ❌"
@@ -420,7 +420,7 @@ def lineBot(op):
                         else: ret_ += "\n╞☪ Check Sticker ❌"
                         if settings["detectMention"] == True: ret_ += "\n╞☪ Detect Mention ✅"
                         else: ret_ += "\n╞☪ Detect Mention ❌"
-                        ret_ += "\n╰════════╬╬════════╯\n╭════════╬╬════════╮\n  ●TΣΔM SLΔCҜβΩT●\n╰════════╬╬════════╯"
+                        ret_ += "\n╰════════╬╬═══════╯\n╭═══════╬╬════════╮\n  ●TΣΔM SLΔCҜβΩT●\n╰════════╬╬════════╯"
                         Galank.sendMessage(to, str(ret_))
                     except Exception as e:
                         Galank.sendMessage(msg.to, str(e))
